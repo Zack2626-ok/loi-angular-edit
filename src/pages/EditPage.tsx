@@ -1,6 +1,5 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { Button, Form, Input, InputNumber } from "antd";
-import { useForm } from "antd/es/form/Form";
 import axios from "axios";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
@@ -12,7 +11,7 @@ function EditPage() {
   const [form] = Form.useForm();
 
   const { data } = useQuery({
-    queryKey: ["products"],
+    queryKey: ["products", id],
     queryFn: async () => {
       const res = await axios(`http://localhost:3000/products/${id}`);
       return res.data;
@@ -31,14 +30,14 @@ function EditPage() {
   const { mutate } = useMutation({
     mutationKey: ["products"],
     mutationFn: async (value) => {
-      await axios.put(`http://localhost:3000/products`, value);
+      await axios.put(`http://localhost:3000/products/${id}`, value);
     },
     onSuccess: () => {
-      toast.success("them thanh cong");
+      toast.success("sua thanh cong");
       nav("/list");
     },
     onError: () => {
-      toast.success("them that bai");
+      toast.success("sua that bai");
     },
   });
 

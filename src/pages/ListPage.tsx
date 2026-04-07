@@ -17,7 +17,6 @@ function ListPage() {
     if (confirm("ban co chac mon xoa?")) {
       await axios.delete(`http://localhost:3000/products/${id}`);
       toast.success("xoa thanh cong");
-      refetch(); // reload lai trang
     }
   };
   const column = [
@@ -54,13 +53,23 @@ function ListPage() {
           <>
             <Link
               to={`/edit/${record.id}`}
-              style={{ padding: 20, marginRight: 15, backgroundColor: "green" }}
+              style={{
+                color: "white",
+                padding: 10,
+                marginRight: 15,
+                backgroundColor: "green",
+              }}
             >
               Sửa
             </Link>
             <button
               onClick={() => onDelete(record.id)}
-              style={{ padding: 20, marginRight: 15, backgroundColor: "red" }}
+              style={{
+                color: "white",
+                padding: 10,
+                marginRight: 15,
+                backgroundColor: "red",
+              }}
             >
               xóa
             </button>
