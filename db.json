@@ -1,0 +1,21 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 15",
+      "price": 25000000,
+      "category": "Phone",
+      "image": "https://product.hstatic.net/200000456405/product/52649_dien_thoai_thong_minh_apple_iphone_15_pro_xanh_4_8796820263cb4842b005a73523dc58dd.png",
+      "description": "sản phẩm tốt"
+    },
+    {
+      "name": "bao toan",
+      "price": 123,
+      "category": "dang cap",
+      "image": "https://picsum.photos/id/242/200/300",
+      "description": "Laptop HP Victus 15-FB3116AX BX8U4PA – Hiệu năng mạnh mẽ, thiết kế hiện đại, tối ưu trải nghiệm gaming và học tập.",
+      "id": 2
+    }
+  ],
+  "users": []
+}
